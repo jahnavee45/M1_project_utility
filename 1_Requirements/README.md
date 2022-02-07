@@ -1,4 +1,4 @@
-# Reseadrch
+# Research
  
  The project is "Departmental Store Management System". This is rather a broad definition that can include merchandising aids, displays and the methods used to enable transactions. But in this project the hardware and software that runs both the front counter and back office operations of a business. 
 
