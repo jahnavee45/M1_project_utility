@@ -30,20 +30,20 @@
  
  # 4W1H
 
- 1- Why
+ # 1- Why
      . Why do we need this system?
        . This track the record of each product, i.e., add, delete or  edit
        . The billing is easy as the product record is available
- 2- Who
+ # 2- Who
      . Who can accsess?
        . The owner of the department can easily access the system
- 3- What
+ # 3- What
      . What could be implemented?
        . The products could be added, deleted or edited
- 4- Where
+ # 4- Where
      . Where the system could be used?
        . This system is helpful for small store management
- 5- How
+ # 5- How
      . How the system runs?
        . The main menu window appears on each execution
        . Once the required option is selected, the terminal shows the desired results
