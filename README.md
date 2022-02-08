@@ -1,1 +1,1 @@
-# M1_project_utility
+# M1_DepartmentalStoreManagementSystem
