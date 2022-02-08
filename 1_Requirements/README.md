@@ -6,26 +6,26 @@
 
  # High-Level requirements
 
- 1- Main Menu, is the window tht displays
+ # 1- Main Menu, is the window tht displays
     . Calculate Bill
     . Add goods
     . Edit goods
     . Display All
     . Search goods
     . Delete goods
- 2- Products
+ # 2- Products
     . One can easily find the required product with the amount mentioned
- 3- Payment
+ # 3- Payment
     . There is an added billing system
     . It gets the amount of the product from system by the name
     . Gives discount if present
- 4- Refund/ cancellation
+ # 4- Refund/ cancellation
 
  # Low-Level requirements
 
- 1- Usablity
+ # 1- Usablity
     The system's user interface, easy to use and provide an overall positive user experience
- 2- Security
+ # 2- Security
     The software system needs a robust security mechanism in place so that unauthorised users are not allowed the access to system
  
  # 4W1H
