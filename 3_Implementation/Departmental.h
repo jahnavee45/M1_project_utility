@@ -15,12 +15,14 @@ typedef struct
 } rec;
 rec item;
 
+//int getc(FILE *__stream);
+
 /*declaration of checking functions*/
 void c_code(char[]);
 int check(char[]);
 
 /*declaration of display functions*/
-void curser(int);
+void cursor(int);
 void dis_bill();
 void mainmenu();
 void display(rec *,int,int);

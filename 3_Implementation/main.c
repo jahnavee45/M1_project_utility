@@ -1,9 +1,13 @@
 #include<stdio.h>
-#include "sampleP.h"
+#include "Departmental.h"
 
-/*start of main*/
+/**
+ * @brief Main function
+ * 
+ * @return int 
+ */
 int main()
 {
-    d_mainmenu();
+    mainmenu();
     return 0;
 }

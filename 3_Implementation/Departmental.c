@@ -11,16 +11,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<ctype.h>
 
-//#include "Departmental.h"
+#include "Departmental.h"
 
 /**
- * @brief 
+ * @brief MainMenu function
  * 
  */
 void mainmenu(){
     int i;
-    char ch;
+    //char ch;
     const char *menu[]= {"   Calculate Bill","   Add Goods","   Edit Goods","   Display All  ","   Search Goods", "   Delete Goods","   Exit" };
     system("cls");
 
@@ -49,12 +50,12 @@ void mainmenu(){
 }
 
 /**
- * @brief 
+ * @brief to display the search item
  * 
  */
 void dis_search()
 {
-    char ch;
+    //char ch;
     int i;
     const char *menu[]= {"   By Code","   By Rate","   By Quantity","   Back to main menu"};
     system("cls");
@@ -66,10 +67,13 @@ void dis_search()
     cursor(4);
 }
 
-/*function for cursor movement*/
+/**
+ * @brief Function for movement of cursor
+ * 
+ */
 void cursor(int no){
     int count = 1;
-    char ch = getch();
+    char ch = getchar();
 
     highlight(no,count);
     if(ch == '\r')
@@ -86,7 +90,7 @@ void cursor(int no){
         }
           if(no==4)
             {
-                if (count==1) c_code();
+                if (count==1)dis_code();
                 else if (count==2)dis_rate();
                 else if (count==3) dis_quan();
                 else mainmenu();
@@ -94,6 +98,12 @@ void cursor(int no){
     }
 }
 
+/**
+ * @brief To display the required field
+ * 
+ * @param no 
+ * @param count 
+ */
 void highlight(int no,int count)
 {
     if (no==4)
@@ -156,6 +166,10 @@ void highlight(int no,int count)
     }
 }
 
+/**
+ * @brief For calculating the bill
+ * 
+ */
 void bill()
 {
     char x[4]= {0};
@@ -204,11 +218,14 @@ void bill()
         printf("TOTAL AMOUNT = NRs. %6.2f",gtotal);
     }
     fclose(file);
-    getch();
+    extern int getc(FILE *__stream);
     mainmenu();
 }
 
-/*function to display bill window*/
+/**
+ * @brief Bill display
+ * 
+ */
 void dis_bill()
 {
     int i;
@@ -228,7 +245,10 @@ void dis_bill()
 
 }
 
-/*function to add records*/
+/**
+ * @brief Adding records
+ * 
+ */
 void add ()
 {
     FILE *file;
@@ -236,7 +256,7 @@ void add ()
     system("cls");
 
     printf("Enter New Record(Y/N)?");
-    while(toupper(getche())=='Y')
+    while(toupper(getchar())=='Y')
     {
         system("cls");
         file=fopen("record.txt","ab");
@@ -257,7 +277,10 @@ void add ()
     mainmenu();
 }
 
-/*function to check availability of code*/
+/**
+ * @brief Check code availaiblity
+ * 
+ */
 void c_code(char y[])
 {
     int flag;
@@ -278,7 +301,7 @@ void c_code(char y[])
                 flag=0;
                 printf("Code Already Exists");
                 printf("Enter Again");
-                getch();
+                extern int getc(FILE *__stream);
                 break;
             }
         }
@@ -287,7 +310,10 @@ void c_code(char y[])
     }
 }
 
-/*function for editing*/
+/**
+ * @brief Function for Editing the items
+ * 
+ */
 void edit()
 {
     int flag=0,choice;
@@ -308,13 +334,13 @@ void edit()
             if(strcmp(item.code,x)==0)
             {
 
-                printf(\n"name       = %s",item.name);
-                printf(\n"code       = %s",item.code);
-                printf(\n"rate       = %g",item.rate);
-                printf(\n"quantity   = %d",item.quantity);
-                printf(\n"Do You Want To Edit This Record?(y/n):");
+                printf("\nname       = %s",item.name);
+                printf("\ncode       = %s",item.code);
+                printf("\nrate       = %g",item.rate);
+                printf("\nquantity   = %d",item.quantity);
+                printf("\nDo You Want To Edit This Record?(y/n):");
                 fflush(file);
-                if(toupper(getche())=='Y')
+                if(toupper(getchar())=='Y')
                 {
 
                     printf("1- Edit Name \n");
@@ -373,12 +399,15 @@ void edit()
         printf("Item Does Not Exist.\n");
         printf("TRY AGAIN\n");
     }
-    getch();
+    extern int getc(FILE *__stream);
     fclose(file);
     mainmenu();
 }
 
-/*function to display all records*/
+/**
+ * @brief To display all records
+ * 
+ */
 void all()
 {
     int i,j=1;
@@ -396,24 +425,27 @@ void all()
         if ((j%20)==0)
         {
             printf("\nPress Any Key To See More...........");
-            getch();
+            extern int getc(FILE *__stream);
             system("cls");
             dis_con();
             i=26;
             continue;
         }
     }
-    getc();
+    extern int getc(FILE *__stream);
     if (i==26)
     {
         printf("-- No Articles Found --\n");
     }
-    getch();
+    extern int getc(FILE *__stream);
     fclose(file);
     mainmenu();
 }
 
-/*function to display by quantity*/
+/**
+ * @brief To display item the quantity
+ * 
+ */
 void dis_quan()
 {
     int i,j=1;
@@ -438,7 +470,7 @@ void dis_quan()
             if ((j%20)==0)
             {
                 printf("\nPress Any Key To See More......");
-                getch();
+                extern int getc(FILE *__stream);
                 system("cls");
                 dis_con();
                 i=26;
@@ -446,16 +478,20 @@ void dis_quan()
             }
         }
     }
-    getch();
+    extern int getc(FILE *__stream);
     if (i==26)
     {
         printf(" No Items Found.\n");
     }
-    getch();
+    extern int getc(FILE *__stream);
     dis_search();
     fclose(file);
 }
 
+/**
+ * @brief To display items by rate
+ * 
+ */
 /*function to display by rate*/
 void dis_rate()
 {
@@ -481,7 +517,7 @@ void dis_rate()
             if ((j%20)==0)
             {
                 printf("\nPress Any Key To See More.....");
-                getch();
+                extern int getc(FILE *__stream);
                 system("cls");
                 dis_con();
                 i=26;
@@ -489,22 +525,25 @@ void dis_rate()
             }
         }
     }
-    getch();
+    extern int getc(FILE *__stream);
     if (i==26)
     {
         printf(" No Item Found \n");
     }
-    getch();
+    extern int getc(FILE *__stream);
     fclose(file);
     dis_search();
 }
 
-/*function to display by code*/
+/**
+ * @brief To display item by code
+ * 
+ */
 void dis_code()
 {
     int i,j=1;
     char x[4]= {0};
-    FILE* file;
+    FILE*  file;
     dis_con();
     file=fopen("record.txt","rb");
     rewind(file);
@@ -526,11 +565,15 @@ void dis_code()
     {
         printf("\nNo Item Found\n");
     }
-    getch();
+    extern int getc(FILE *__stream);
     fclose(file);
     dis_search();
 }
 
+/**
+ * @brief Window for item display
+ * 
+ */
 /*function to display window for item display*/
 void dis_con()
 {
@@ -562,7 +605,10 @@ void display(rec *item,int i,int j)
     printf("%11d",item->quantity);
 }
 
-/*function to delete records*/
+/**
+ * @brief To delete records
+ * 
+ */
 void del()
 {
     int flag;
@@ -595,11 +641,14 @@ void del()
     }
     fclose(file1);
     fclose(file);
-    getch();
+    extern int getc(FILE *__stream);
     mainmenu();
 }
 
-/*function to check validity of code while editing and deleting*/
+/**
+ * @brief Check code availability while editing and deleting
+ * 
+ */
 int check(char x[ANS])
 {
     FILE* file;
