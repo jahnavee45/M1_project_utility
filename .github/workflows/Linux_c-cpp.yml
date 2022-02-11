@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
  
-    - name: make
-      run: gcc Departmental.c main.c -o Departmental.o
+    - name: 3_Implementation/Makefile
+      run: make
     - name: make check
       run: make check
     - name: make distcheck
