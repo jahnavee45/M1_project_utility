@@ -15,10 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: target
-      run: make run
+      run: gcc Departmental.c main.c -o Departmental.o
       
-    - name: make check
-      run: make check
+    - name: run
+      run: ./Departmental.o
       
     - name: make distcheck
       run: make distcheck
