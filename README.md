@@ -8,3 +8,4 @@
 
 # Codiga
    ![MIT License](https://api.codiga.io/project/31540/score/svg)
+   ![GPLv3](https://api.codiga.io/project/31540/status/svg)
