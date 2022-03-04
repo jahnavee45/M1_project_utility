@@ -1,11 +1,25 @@
 #TargetName	:	Dependencies
 #<TAB>commands
 
-target : main.c Departmental.c
-	gcc Departmental.c main.c -o Departmental.out
+PROJ_NAME = Departmental_System
+SRC = main.c Departmental.c
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /, \,$1)
+   EXEC = exe 
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+	  FixPath = $1
+	  EXEC = out
+	endif
+endif
+
+target : 
+	gcc $(SRC) -o $(call FixPath,$(PROJ_NAME).&(EXEC))
 
 run	: target
-	 ./Departmental.out
+	 ./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
 clean	: 
-	  rm Departmental.out
+	  $(RM) $(call FixPath,$(PROJ_NAME).$(EXEC))
