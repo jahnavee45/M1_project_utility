@@ -21,5 +21,8 @@ target :
 run	: target
 	 ./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
+static_analysis : 
+	cppcheck --enable=all $(SRC)
+
 clean	: 
 	  $(RM) $(call FixPath,$(PROJ_NAME).$(EXEC))
