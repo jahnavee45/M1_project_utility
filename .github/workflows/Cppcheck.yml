@@ -15,5 +15,5 @@ jobs:
     - uses: actions/checkout@v2
  
     - name: static_analysis
-      run: make 3_Implementation/ Makefile
+      run: make cppcheck --enable=all 3_Implementation/ Makefile
 
