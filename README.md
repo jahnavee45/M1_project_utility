@@ -3,6 +3,9 @@
 # Build-Linux
   [![Linux C/C++ CI](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Linux_c-cpp.yml/badge.svg)](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Linux_c-cpp.yml)
   
+# Build-Windows
+  [![Windows C/C++ CI](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Windows_c-cpp.yml/badge.svg)](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Windows_c-cpp.yml)
+  
 # Workflow
   [![Linux C/C++ CI](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Linux_c-cpp.yml/badge.svg)](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Linux_c-cpp.yml)
 
