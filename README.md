@@ -6,6 +6,9 @@
 # Build-Windows
   [![Windows C/C++ CI](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Windows_c-cpp.yml/badge.svg)](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Windows_c-cpp.yml)
   
+# Static_Analysis-Cppcheck
+  [![Static_code Cppcheck](https://github.com/jahnavee45/M1_project_utility/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/jahnavee45/M1_project_utility/actions/workflows/cppcheck.yml)
+  
 # Workflow
   [![Linux C/C++ CI](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Linux_c-cpp.yml/badge.svg)](https://github.com/jahnavee45/M1_project_utility/actions/workflows/Linux_c-cpp.yml)
 
